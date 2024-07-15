@@ -37,7 +37,6 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
@@ -48,11 +47,8 @@ dependencyManagement {
 }
 
 generateJava {
-	schemaPaths = ["${projectDir}/src/main/resources/graphql-client"]
+	schemaPaths = ["${projectDir}/src/main/resources/schema"]
 	packageName = 'com.engagehub.api.codegen'
 	generateClient = true
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
