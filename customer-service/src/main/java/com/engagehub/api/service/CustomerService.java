@@ -1,7 +1,7 @@
-package com.engagehub.api.customer.service;
+package com.engagehub.api.service;
 
 import com.engagehub.api.model.Customer;
-import com.engagehub.api.customer.repository.CustomerRepository;
+import com.engagehub.api.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,4 +39,8 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public List<Customer> searchCustomers(String
+    public List<Customer> searchCustomers(String name, String email, String phoneNumber) {
+        // Implement search logic here. For simplicity, using name as criteria.
+        return customerRepository.findByNameContaining(name);
+    }
+}

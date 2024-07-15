@@ -1,7 +1,7 @@
-package com.engagehub.api.customer.dgs;
+package com.engagehub.api.dgs;
 
 import com.engagehub.api.model.Customer;
-import com.engagehub.api.customer.service.CustomerService;
+import com.engagehub.api.service.CustomerService;
 import com.netflix.graphql.dgs.DgsComponent;
 import com.netflix.graphql.dgs.DgsData;
 import com.netflix.graphql.dgs.DgsMutation;
@@ -49,4 +49,15 @@ public class CustomerDataFetcher {
     @DgsMutation
     public Customer updateCustomer(@InputArgument Long id,
                                    @InputArgument String name,
+                                   @InputArgument String email,
+                                   @InputArgument String phoneNumber) {
+        Customer customerDetails = new Customer(null, name, email, phoneNumber);
+        return customerService.updateCustomer(id, customerDetails);
+    }
 
+    @DgsMutation
+    public Boolean deleteCustomer(@InputArgument Long id) {
+        customerService.deleteCustomer(id);
+        return true;
+    }
+}

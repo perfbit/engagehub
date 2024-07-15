@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Citizen {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
