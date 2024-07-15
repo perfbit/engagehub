@@ -1,0 +1,2 @@
+rootProject.name = 'engagehub-crm'
+include 'common', 'service-discovery', 'api-gateway', 'appointment-service', 'customer-service', 'business-service'
