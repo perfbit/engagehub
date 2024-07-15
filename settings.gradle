@@ -1,0 +1,3 @@
+rootProject.name = 'engagehub'
+
+include 'appointment-service', 'auth-service', 'customer-service', 'payment-service', 'review-service'
