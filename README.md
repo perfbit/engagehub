@@ -1,7 +1,7 @@
 # EngageHub CRM
 
 Welcome to the EngageHub CRM project! EngageHub CRM is a versatile customer relationship management platform designed for various industries such as gyms, salons, restaurants, clinics, and more. This project uses a microservices architecture with Spring Boot, Netflix DGS for GraphQL, PostgreSQL for the database, Redis for caching, and Elasticsearch for search functionalities.
-
+!
 ## Table of Contents
 
 - [Features](#features)
